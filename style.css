@@ -1,0 +1,214 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Kanit", sans-serif;
+  background-image: url("./images/photoko.jpg");
+  background-size: cover;
+  background-position: top;
+  width: 100%;
+  height: 100%;
+}
+a {
+  text-decoration: none;
+}
+header {
+  height: 30px;
+}
+nav {
+  display: flex;
+  margin-top: 20px;
+  height: 30px;
+  align-items: center;
+  padding: 10px;
+}
+.navTitle {
+  font-size: 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+.navTab {
+  display: flex;
+}
+.horiline {
+  border: none; /* Remove default border */
+  height: 1px; /* Set the height of the horizontal rule */
+  background-color: #000; /* Set the color of the horizontal rule */
+  margin: 20px 0;
+}
+.navitems {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.navitems:hover {
+  color: orange;
+}
+
+.navitems.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: orange;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+}
+
+.navitems.active:hover:before,
+.navitems.active:focus:before {
+  transform: scaleX(1);
+}
+
+.align-right {
+  margin-left: auto;
+  margin-right: 100px;
+}
+.name,
+.name2,
+.description {
+  opacity: 0; /* Initially set opacity to 0 */
+}
+
+.name {
+  animation: fadeInName 1s ease forwards; /* Apply animation */
+}
+
+.name2 {
+  animation: fadeInName2 1s ease forwards; /* Apply animation */
+  animation-delay: 0.5s; /* Delay the animation for 0.5s */
+}
+
+.description {
+  animation: fadeInDescription 1s ease forwards; /* Apply animation */
+  animation-delay: 1s; /* Delay the animation for 1s */
+}
+
+/* Define the fade-in animation for the name */
+@keyframes fadeInName {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Move to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Return to original position */
+  }
+}
+
+/* Define the fade-in animation for the second name */
+@keyframes fadeInName2 {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Move to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Return to original position */
+  }
+}
+
+/* Define the fade-in animation for the description */
+@keyframes fadeInDescription {
+  from {
+    opacity: 0;
+    transform: translateX(-20px); /* Move to the left */
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0); /* Return to original position */
+  }
+}
+
+.name {
+  color: orange;
+  display: block;
+  text-align: center;
+  margin-top: 200px;
+  line-height: 10px;
+}
+.name2 {
+  margin-left: 610px;
+  font-size: 70px;
+  line-height: 10px;
+  font-weight: 600;
+  color: white;
+  letter-spacing: 5px;
+}
+.description {
+  color: white;
+  text-align: left;
+  font-weight: 300;
+  font-size: 16px;
+  margin-left: 610px;
+  margin-bottom: 50px;
+}
+.btnAM {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 610px;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Add transition for smooth background color change */
+  animation: colorChange 2s infinite alternate; /* Apply color animation */
+}
+
+.btnAM {
+  background-color: orange;
+  color: white;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-left: 610px; /* Initial position */
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease; /* Add transition for smooth background color change */
+}
+
+.btnAM:hover {
+  animation: moveRight 0.5s forwards; /* Apply movement animation on hover */
+}
+
+@keyframes moveRight {
+  from {
+    margin-left: 610px; /* Start position */
+  }
+  to {
+    margin-left: 630px; /* End position (move to the right) */
+  }
+}
+
+.cards {
+  background-color: gray;
+}
+
+/* //FOOTER */
+.site-footer .text-center {
+  justify-content: center;
+  margin-top: 150px;
+  margin-bottom: 0;
+  display: flex;
+  background-color: rgb(34, 34, 34);
+  align-items: center;
+  text-align: center;
+  height: 52px;
+  width: 100%;
+  color: white;
+}

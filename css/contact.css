@@ -1,0 +1,178 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url(/images/skillsbg.jpg);
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  margin-top: 20px;
+  height: 30px;
+  align-items: center;
+  padding: 10px;
+}
+
+.navTab {
+  display: flex;
+}
+
+.horiline {
+  border: none;
+  /* Remove default border */
+  height: 1px;
+  /* Set the height of the horizontal rule */
+  background-color: #000;
+  /* Set the color of the horizontal rule */
+  margin: 20px 0;
+}
+
+.navTitle {
+  font-size: 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navitems {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.navitems:hover {
+  color: orange;
+}
+
+.navitems.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: orange;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+}
+
+.navitems.active:hover:before,
+.navitems.active:focus:before {
+  transform: scaleX(1);
+}
+
+.align-right {
+  margin-left: auto;
+  margin-right: 100px;
+}
+
+.container {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 20px;
+  background-color: transparent;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  border: 1px solid white;
+  align-items: center;
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: translateY(20px); /* Initially set translate to below */
+  animation: fadeInForm 1s ease forwards; /* Apply animation */
+  animation-delay: 1s; /* Delay the animation for 1s */
+}
+
+h1 {
+  color: orange;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.contact-form {
+  margin-top: 10px;
+  width: 100%;
+  max-width: 400px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  color: white;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.form-group textarea {
+  resize: none;
+}
+
+.form-group input[type="submit"] {
+  background-color: orange;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.form-group input[type="submit"]:hover {
+  background-color: orange;
+}
+
+/* Define the fade-in animation for the form */
+@keyframes fadeInForm {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* //FOOTER */
+.site-footer .text-center {
+  justify-content: center;
+  margin-bottom: 0;
+  display: flex;
+  background-color: rgb(34, 34, 34);
+  align-items: center;
+  text-align: center;
+  height: 52px;
+  width: 100%;
+  color: white;
+}

@@ -1,0 +1,242 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  background-image: url(/images/skillsbg.jpg);
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+header {
+  height: 30px;
+}
+
+nav {
+  display: flex;
+  margin-top: 20px;
+  height: 30px;
+  align-items: center;
+  padding: 10px;
+}
+
+.navTab {
+  display: flex;
+}
+
+.horiline {
+  border: none;
+  /* Remove default border */
+  height: 1px;
+  /* Set the height of the horizontal rule */
+  background-color: #000;
+  /* Set the color of the horizontal rule */
+  margin: 20px 0;
+}
+
+.navTitle {
+  font-size: 40px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  margin-left: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.navitems {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 5px 10px;
+  font-size: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  position: relative;
+  margin-left: 30px;
+  margin-bottom: 30px;
+}
+
+.navitems:hover {
+  color: orange;
+}
+
+.navitems.active::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 4px;
+  border-radius: 2px;
+  background-color: orange;
+  transition: transform 300ms ease-in-out;
+  transform: scaleX(0);
+}
+
+.navitems.active:hover:before,
+.navitems.active:focus:before {
+  transform: scaleX(1);
+}
+
+.align-right {
+  margin-left: auto;
+  margin-right: 100px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  height: 510px;
+}
+.card svg {
+  margin-top: 50px;
+}
+.card,
+.percent,
+.skills {
+  opacity: 0; /* Initially set opacity to 0 */
+  transform: translateY(20px); /* Initially set translate to below */
+}
+
+.card {
+  margin-top: 50px;
+  text-align: center;
+  width: 300px;
+  border-radius: 5px;
+  height: 400px;
+  justify-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgb(90, 88, 88);
+  animation: fadeInCard 1s ease forwards; /* Apply animation */
+  animation-delay: 1s; /* Delay the animation for 1s */
+}
+
+.percent {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 300;
+  color: white;
+  animation: fadeInPercent 1s ease forwards; /* Apply animation */
+  animation-delay: 0.5s; /* Delay the animation for 0.5s */
+}
+
+.skills {
+  margin-top: 60px;
+  text-align: center;
+  display: block;
+  color: orange;
+  text-transform: uppercase;
+  font-size: 30px;
+  animation: fadeInSkills 1s ease forwards; /* Apply animation */
+}
+
+/* Define the fade-in animation for the card */
+@keyframes fadeInCard {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* Define the fade-in animation for the percent */
+@keyframes fadeInPercent {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+/* Define the fade-in animation for the skills */
+@keyframes fadeInSkills {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Move below */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0); /* Return to original position */
+  }
+}
+
+.skillSet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  height: 600px;
+}
+
+.containerIcon {
+  width: 300px;
+  height: 300px;
+  background-color: rgb(90, 88, 88);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: popOut 0.5s forwards, fadeIn 0.5s forwards;
+}
+
+.containerIcon svg {
+  fill: white;
+}
+
+.skilldescription {
+  color: white;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: normal;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: popOut 1s forwards, fadeIn 1s forwards;
+}
+
+@keyframes popOut {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.skilldescription h2 {
+  font-size: 30px;
+}
+
+/* //FOOTER */
+.site-footer .text-center {
+  justify-content: center;
+  margin-bottom: 0;
+  display: flex;
+  background-color: rgb(34, 34, 34);
+  align-items: center;
+  text-align: center;
+  height: 52px;
+  width: 100%;
+  color: white;
+}
